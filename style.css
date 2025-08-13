@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.pinimg.com/1200x/5f/27/56/5f275632b536f8bd7fe02c65b0048f0f.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.taskbar {
+   position:absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #2C001E;
+    height: 30px;
+}
+.icons {
+    position: fixed; /* So it stays in place */
+    top: 100px;       /* Distance from top of screen */
+    left: 20px;       /* Distance from left edge */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;        /* Space between icons */
+    z-index: 1000;
+}
+
+.icons img {
+    height: 64px;     /* Bigger icons */
+    width: 64px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+}
